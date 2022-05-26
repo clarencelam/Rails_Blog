@@ -15,12 +15,28 @@ class ArticlesController < ApplicationController
 
   # action to create anew article and save it
   def create
-    @article = Article.new(title: "...", body: "...")
+    @article = Article.new(article_params)
 
     if @article.save
       redirect_to @article
     else
       render :new, status: :unprocessable_entity
+    end
+  end
+
+  # action to edit an article
+  def edit
+    @article = Article.find(params[:id])
+  end
+
+  # action to apply an edit to an article
+  def update
+    @article = Article.find(params[:id])
+
+    if @article.update(article_params)
+      redirect_to @article
+    else
+      render :edit, status: :unprocessable_entity
     end
   end
 
