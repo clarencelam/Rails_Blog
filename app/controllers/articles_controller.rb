@@ -40,6 +40,14 @@ class ArticlesController < ApplicationController
     end
   end
 
+  # action to delete an article
+  def destroy
+    @article = Article.find(params[:id])
+    @article.destroy
+
+    redirect_to root_path, status: :see_other
+  end
+
   #private method to specify and guard what params are ingested
   private 
     def article_params
