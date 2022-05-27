@@ -18,14 +18,9 @@
     margin-top: 50px;
     text-align: center;
     width: 100%;
-    h1 {
-        margin-bottom: 10px;
-        font-size: 40px;
-        font-family: 'Nova Oval', cursive;
-    }
-    p {
-        margin: 10px 0;
-        font-size: 25px;
-        color: #888
-    }
+}
+.index-container {
+    margin-top: 50px;
+    text-align: left;
+    width: 100%;
 }

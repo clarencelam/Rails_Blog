@@ -2,6 +2,7 @@
 <h1>Clam's Blog</h1>
 <p>Musings about life and finance</p>
 </div>
+<div class="index-container">
 <ul>
     <% @articles.each do |article| %>
         <li>
@@ -10,3 +11,5 @@
       </li> 
       <% end %>
 </ul>
+<%= link_to "New Article", new_article_path %>
+</div>
