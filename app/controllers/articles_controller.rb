@@ -51,7 +51,7 @@ class ArticlesController < ApplicationController
   #private method to specify and guard what params are ingested
   private 
     def article_params
-      params.require(:article).permit(:title, :body)
+      params.require(:article).permit(:title, :body, :subtitle)
     end
 
 end

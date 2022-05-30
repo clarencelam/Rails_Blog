@@ -8,6 +8,14 @@
   </div>
 
   <div>
+    <%= form.label :subtitle %><br>
+    <%= form.text_field :subtitle %><br>
+    <% article.errors.full_messages_for(:subtitle).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
     <%= form.label :body %><br>
     <%= form.text_area :body %><br>
     <% article.errors.full_messages_for(:body).each do |message| %>
