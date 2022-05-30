@@ -1,16 +1,35 @@
 
-<div class="col-4">
-<h1>Clam's Blog</h1>
-<p>Musings about life and finance</p>
+<div class="row">
+  <div class="col-4">
+  </div>
+  <div class="col-4">
+  <h1>Clam's Blog</h1>
+  <p>Musings about life and finance</p>
+  </div>
+  <div class="col-4">
+  </div>
+</div>
+
+<div class="row">
+<div class="col-1">
 </div>
 <div class="col-10">
-<ul>
     <% @articles.each do |article| %>
-        <li>
+        <div>
         <%= link_to article.title, article %>
         </a>
-      </li> 
+      </div> 
       <% end %>
-</ul>
+</div>
+<div class="col-1">
+</div>
+</div>
+
+<div class="col-1">
+</div>
+<div class="col-10">
 <%= link_to "New Article", new_article_path %>
 </div>
+<div class="col-1">
+</div>
+
