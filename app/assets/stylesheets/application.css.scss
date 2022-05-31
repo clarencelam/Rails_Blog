@@ -38,7 +38,7 @@
   [class*="col-"] {
     float: left;
     padding: 15px;
-    border: 1px solid red;
+    border: 0px solid red;
   }  
   
   .row::after {
@@ -73,6 +73,12 @@
   
   }  
 }    
+
+.article{
+  border: 1px solid black;
+  padding: 1em;
+
+}
 
 .article-link{
   text-decoration: none;

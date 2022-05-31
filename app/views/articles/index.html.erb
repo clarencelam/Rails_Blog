@@ -16,29 +16,29 @@
 
 <div class="article-continer">
   <div class="row">
-    <div class="col-1">
+    <div class="col-3">
     </div>
-    <div class="col-10">
+    <div class="col-6">
       <div class="article-list">
         <% @articles.each do |article| %>
             <div class="article">
-            <h3><%= link_to article.title, article, class: "article-link" %></h3>
+            <h3>► <%= link_to article.title, article, class: "article-link" %></h3>
             <%= article.subtitle %>
             </div> 
           <% end %>
         </div>
     </div>
-    <div class="col-1">
+    <div class="col-3">
     </div>
   </div>
 </div>
 
 <div class="new-button-container">
-  <div class="col-1">
+  <div class="col-3">
   </div>
-  <div class="col-10">
+  <div class="col-6">
   <%= link_to "New Article", new_article_path %>
   </div>
-  <div class="col-1">
+  <div class="col-3>
   </div>
 </div>
