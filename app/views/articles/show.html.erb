@@ -1,16 +1,53 @@
-<h1><%= @article.title %></h1>
-<p><%= @article.body %></p>
+<div class="banner-container">
+  <div class="row">
+    <div class="col-4">
+    </div>
+    <div class="col-4">
+      <div class="hero-text">
+        <h1><%= link_to "Clam's Blog", root_path, class: "blog-link" %></h1>
+        <p>Musings about life and finance</p>
+      </div>
+    </div>
+    <div class="col-4">
+    </div>
+  </div>
+</div>
 
-<ul>
-    <li><%= link_to "Edit", edit_article_path(@article) %></li>
-    <li><%= link_to "Destroy", article_path(@article), data: {
-        turbo_method: :delete,
-        turbo_confirm: "Are you sure?"
-    } %></li>
-<ul>
+<div class="article-continer">
+  <div class="row">
+    <div class="col-3">
+    </div>
+    <div class="col-6">
+      <h1><%= @article.title %></h1>
+      <p><%= @article.body %></p>
 
-<h2>Comments</h2>
-<%= render @article.comments %>
+      <ul>
+          <li><%= link_to "Edit", edit_article_path(@article) %></li>
+          <li><%= link_to "Destroy", article_path(@article), data: {
+              turbo_method: :delete,
+              turbo_confirm: "Are you sure?"
+          } %></li>
+      <ul>
 
-<h2>Add a comment:</h2>
-<%= render 'comments/form' %>
+    </div>
+    <div class="col-3">
+    </div>
+  </div>
+</div>
+
+<div class="article-continer">
+  <div class="row">
+    <div class="col-3">
+    </div>
+    <div class="col-6">
+      <h2>Comments</h2>
+      <%= render @article.comments %>
+
+      <h2>Add a comment:</h2>
+      <%= render 'comments/form' %>    
+      
+    </div>
+    <div class="col-3">
+    </div>
+  </div>
+</div>
